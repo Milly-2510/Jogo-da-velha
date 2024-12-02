@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial - Jogo da Velha</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #666;
+        }
+
+        .buttons-container {
+            margin-top: 30px;
+        }
+
+        .start-button {
+            font-size: 18px;
+            padding: 10px 20px;
+            background-color: #0e0f0e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .start-button:hover {
+            background-color: #c71d17;
+        }
+
+        .start-button:active {
+            background-color: #44b44a;
+        }
+
+        .mode-button {
+            font-size: 16px;
+            padding: 8px 18px;
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .mode-button:hover {
+            background-color: #1976D2;
+        }
+
+        .mode-button:active {
+            background-color: #1565C0;
+        }
+
+        .footer {
+            font-size: 14px;
+            color: #888;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Jogo da Velha</h1>
+        <p>Escolha seu modo de jogo e divirta-se!</p>
+        <div class="buttons-container">
+           
+           <a href="Jogodavelha/jogo.html">  <button class="start-button" onclick="startGame('bot')" >Jogar contra o Bot </button></a>
+            <br>
+           <a href="jogo2/jogo2.html">  <button class="start-button" onclick="startGame('multiplayer')">Jogar com outro Jogador</button> </a>
+        </div>
+        <div class="footer">
+            <p></p>
+        </div>
+    </div>
+
+    <script>
+        function startGame(mode) {
+            if (mode === 'bot') {
+                window.location.href = "jogo_da_velha_com_bot.html"; // Redireciona para a página do jogo com bot
+            } else if (mode === 'multiplayer') {
+                window.location.href = "jogo_da_velha_multiplayer.html"; // Redireciona para a página do jogo para 2 jogadores
+            }
+        }
+    </script>
+
+</body>
+</html>
+
